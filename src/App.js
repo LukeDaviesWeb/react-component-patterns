@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+//import { AnimatedMediumClap } from './components/MediumClap'
+import { MediumClapWithHook } from './components/MediumClapWithHook'
+import styled from 'styled-components'
 
+const AppWrap = styled.div`
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+`
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <AppWrap>
+                <MediumClapWithHook />
+            </AppWrap>
+        </div>
+    )
 }
 
-export default App;
+export default App
